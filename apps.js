@@ -13,9 +13,9 @@
  const io=require('socket.io')(http);
 
  // if we have a get request and we have a url of /home then we will get a response as Welcome to home page
-//  app.get("/home" , function(req,res){
-//      res.end("<h1>Welcome to home page !!!</h1>")
-//  })
+  app.get("/" , function(req,res){
+     res.end("Welcome")
+  })
 
 io.on('connection',(socket) =>{
     console.log(`${socket.id} user connected`);
